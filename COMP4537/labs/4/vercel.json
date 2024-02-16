@@ -1,6 +1,1 @@
-{
-  "rewrites": [
-    {"source": "comp-4537-lab4-5gknrh3fj-lauries-projects-3d0fa779.vercel.app", "destination": "https://comp-4537-lab4.vercel.app/"}
-    
-  ]
-}
+{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
