@@ -1,11 +1,6 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "COMP4537/labs/4/index.html",
-        "use": "@vercel/static"
-      }
-    ],
+   
     "routes": [
       {
         "src": "/(.*)",
