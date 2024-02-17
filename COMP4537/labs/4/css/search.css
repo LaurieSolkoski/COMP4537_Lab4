@@ -54,7 +54,7 @@ button:hover {
     font-size: 16px;
 }
 
-/* For browsers that do not support backdrop-filter */
+
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .container {
         background: rgba(255, 255, 255, 0.8);
