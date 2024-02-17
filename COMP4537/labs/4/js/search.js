@@ -2,6 +2,13 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const word = document.getElementById('searchWord').value;
+    // Regular expression to match only letters
+    const regex = /^[A-Za-z]+$/;
+
+    if (!word.match(regex)) {
+        document.getElementById('searchResponse').textContent = 'Please enter a valid word (letters only).';
+        return;
+    }
 
     fetch(`https://yourDomainName2.wyz/api/definitions/?word=${encodeURIComponent(word)}`, {
         method: 'GET',

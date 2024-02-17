@@ -3,6 +3,14 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
 
     const word = document.getElementById('word').value;
     const definition = document.getElementById('definition').value;
+    // Regular expression to match only letters for word
+    const wordRegex = /^[A-Za-z]+$/;
+
+    if (!word.match(wordRegex) || definition.trim().length === 0) {
+        document.getElementById('response').textContent = 'Please enter a valid word (letters only) and a non-empty definition.';
+        return;
+    }
+
     const data = { word, definition };
 
     fetch('https://yourDomainName2.wyz/api/definitions', {
