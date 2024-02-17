@@ -1,1 +1,7 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "rewrites": [
+    { "source": "/", "destination": "/COMP4537/labs/4/index.html" },
+    { "source": "/store", "destination": "/COMP4537/labs/4/store.html" },
+    { "source": "/search", "destination": "/COMP4537/labs/4/search.html" }
+  ]
+}
