@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-    color: #2a1818;
+    color: #000000;
     font-size: 24px;
     margin-bottom: 20px;
     mix-blend-mode: screen;
@@ -45,7 +45,7 @@ button {
 }
 
 button:hover {
-    background-color: #f0f0f0;
+    background-color: #4d0e0e;
 }
 
 #searchResponse {
@@ -54,7 +54,7 @@ button:hover {
     font-size: 16px;
 }
 
-
+/* For browsers that do not support backdrop-filter */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .container {
         background: rgba(255, 255, 255, 0.8);
