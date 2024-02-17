@@ -1,0 +1,11 @@
+{
+    "version": 2,
+   
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "COMP4537/labs/4/$1"
+      }
+    ]
+  }
+  
