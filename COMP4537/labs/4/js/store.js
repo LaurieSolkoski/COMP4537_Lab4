@@ -13,7 +13,7 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
 
     const data = { word, definition };
 
-    fetch('https://comp-4537-lab4-server2.vercel.appapi/definitions', {
+    fetch('https://comp-4537-lab4-server2.vercel.app/api/definitions', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
