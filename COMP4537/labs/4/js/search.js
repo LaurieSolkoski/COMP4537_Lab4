@@ -10,7 +10,7 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
         return;
     }
 
-    fetch(`https://comp-4537-lab4-server2.vercel.app/api/definitions/?word=${encodeURIComponent(word)}`, {
+    fetch(`https://ondrik.dev/comp4537/labs/5/api/definitions/?word=${encodeURIComponent(word)}`, {
         method: 'GET',
     })
     .then(response => response.json())
