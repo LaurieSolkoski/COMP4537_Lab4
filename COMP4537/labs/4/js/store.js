@@ -1,13 +1,13 @@
 document.getElementById('storeForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const word = document.getElementById('word').value;
-    const definition = document.getElementById('definition').value;
+    const word = document.getElementById('word').value.trim();
+    const definition = document.getElementById('definition').value.trim();
     // Regular expression to match only letters for word
     const wordRegex = /^[A-Za-z]+$/;
 
-    if (!word.match(wordRegex) || definition.trim().length === 0) {
-        document.getElementById('response').textContent = 'Please enter a valid word (letters only) and a non-empty definition.';
+    if (!wordRegex.test(word) || definition.length === 0) {
+        document.getElementById('response').innerHTML = 'Please enter a valid word (letters only) and a non-empty definition.';
         return;
     }
 
@@ -20,14 +20,17 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
         },
         body: JSON.stringify(data),
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
-        document.getElementById('response').textContent = data.message;
+        document.getElementById('response').innerHTML = `Response: ${data.message}`;
     })
     .catch((error) => {
         console.error('Error:', error);
-        document.getElementById('response').textContent = 'Failed to store the entry.';
+        document.getElementById('response').innerHTML = 'Failed to store the entry.';
     });
 });
-
-
