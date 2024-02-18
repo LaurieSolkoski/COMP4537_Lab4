@@ -54,6 +54,34 @@ button:hover {
     font-size: 16px;
 }
 
+.response-box {
+    padding: 10px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+    border: 1px solid #ffffff; 
+    color: #ffffff; 
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    display: inline-block; 
+    max-width: 100%;
+    word-wrap: break-word; 
+}
+
+
+.response-box.error {
+    background: rgba(139, 0, 0, 0.6);
+    border-color: #ffbaba; 
+}
+
+
+.response-box.success {
+    background: rgba(31, 168, 31, 0.3); 
+    border-color: #d4edda; 
+}
+
+
 /* For browsers that do not support backdrop-filter */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .container {
