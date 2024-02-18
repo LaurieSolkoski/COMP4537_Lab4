@@ -18,14 +18,16 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.parse(data),
+        body: JSON.stringify(data),
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('response').textContent = `Response: ${data.message}`;
+        document.getElementById('response').textContent = `Response: ${JSON.stringify(data.message)};`;
     })
     .catch((error) => {
         console.error('Error:', error);
         document.getElementById('response').textContent = 'Failed to store the entry.';
     });
 });
+
+
