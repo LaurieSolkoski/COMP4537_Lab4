@@ -15,8 +15,8 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        if(data.definition) {
-            document.getElementById('searchResponse').textContent = `Definition: ${data.definition}`;
+        if(data.message) {
+            document.getElementById('searchResponse').textContent = `${data.message}`;
         } else {
             document.getElementById('searchResponse').textContent = 'Word not found.';
         }

@@ -22,7 +22,7 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('response').textContent = `Response: ${JSON.stringify(data.message)};`;
+        document.getElementById('response').textContent = data.message;
     })
     .catch((error) => {
         console.error('Error:', error);
