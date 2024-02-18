@@ -18,7 +18,7 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.parse(data),
     })
     .then(response => response.json())
     .then(data => {
