@@ -10,8 +10,15 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+h1 {
+    color: #000000 !important;
+    font-size: 24px;
+    margin-bottom: 20px;
+    mix-blend-mode: screen;
+}
+
 .container {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
@@ -19,13 +26,6 @@ body {
     text-align: center;
     width: 80%;
     max-width: 400px;
-}
-
-h1 {
-    color: #000000;
-    font-size: 24px;
-    margin-bottom: 20px;
-    mix-blend-mode: screen;
 }
 
 input[type="text"], button {
