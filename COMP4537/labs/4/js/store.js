@@ -1,13 +1,17 @@
+/// DISCLOSURE: the following JavaScript code has been created with the aid of 
+// Chat GPT 3.5 and edited by Laurie Solkoski. 
+
+
 document.getElementById('storeForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const word = document.getElementById('word').value.trim();
     const definition = document.getElementById('definition').value.trim();
-    // Regular expression to match only letters for word
+    // expression to match only letters for word
     const wordRegex = /^[A-Za-z]+$/;
 
     if (!wordRegex.test(word) || definition.length === 0) {
-        document.getElementById('response').innerHTML = 'Please enter a valid word (letters only) and a non-empty definition.';
+        document.getElementById('response').innerHTML = langEN.ENTER_VALID_WORD + ' ' + langEN.NON_EMPTY_DEFINITION;
         return;
     }
 
@@ -27,10 +31,10 @@ document.getElementById('storeForm').addEventListener('submit', function(e) {
         return response.json();
     })
     .then(data => {
-        document.getElementById('response').innerHTML = `Response: ${data.message}`;
+        document.getElementById('response').innerHTML = langEN.RESPONSE_PREFIX + data.message;
     })
     .catch((error) => {
         console.error('Error:', error);
-        document.getElementById('response').innerHTML = 'Failed to store the entry.';
+        document.getElementById('response').innerHTML = langEN.FAILED_STORE_ENTRY;
     });
 });

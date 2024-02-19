@@ -1,12 +1,15 @@
+/// DISCLOSURE: the following JavaScript code has been created with the aid of 
+// Chat GPT 3.5 and edited by Laurie Solkoski. 
+
 document.getElementById('searchForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const word = document.getElementById('searchWord').value.trim();
-    // Regular expression to match only letters
+    // xpression to match only letters
     const regex = /^[A-Za-z]+$/;
 
     if (!regex.test(word)) {
-        document.getElementById('searchResponse').innerHTML = 'Please enter a valid word (letters only).';
+        document.getElementById('searchResponse').innerHTML = langEN.ENTER_VALID_WORD;
         return;
     }
 
@@ -20,10 +23,10 @@ document.getElementById('searchForm').addEventListener('submit', function(e) {
         return response.json();
     })
     .then(data => {
-        document.getElementById('searchResponse').innerHTML = data.message || 'Word not found.';
+        document.getElementById('searchResponse').innerHTML = data.message || langEN.WORD_NOT_FOUND;
     })
     .catch((error) => {
         console.error('Error:', error);
-        document.getElementById('searchResponse').innerHTML = 'Failed to fetch the definition.';
+        document.getElementById('searchResponse').innerHTML = langEN.FAILED_FETCH_DEFINITION;
     });
 });
