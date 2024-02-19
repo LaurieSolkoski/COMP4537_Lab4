@@ -7,28 +7,28 @@ body {
     background: url('/public/images/index.gif') no-repeat center center fixed;
     background-size: cover;
     display: flex;
-    flex-direction: column; /* Change to column to stack items vertically */
-    justify-content: flex-start; /* Align items to the top */
+    flex-direction: column; 
+    justify-content: flex-start; 
     align-items: center;
     height: 100vh;
     font-family: 'Arial', sans-serif;
 }
 
 .header-backdrop {
-    background: rgba(255, 255, 255, 0.5); /* Slightly more opaque for readability */
+    background: rgba(255, 255, 255, 0.5); 
     backdrop-filter: blur(10px);
     padding: 20px;
-    margin-top: 20px; /* Add margin at the top */
+    margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 80%;
-    max-width: 600px; /* Adjusted for header content */
-    color: #000; /* Text color */
-    font-size: 18px; /* Larger font size for visibility */
-    position: fixed; /* Make it fixed at the top */
-    top: 10px; /* Position from the top */
-    z-index: 1000; /* Ensure it's above other content */
+    max-width: 600px; 
+    color: #000;
+    font-size: 18px; 
+    position: fixed; 
+    top: 10px;
+    z-index: 1000; 
     margin-top: 50px;
 }
 
